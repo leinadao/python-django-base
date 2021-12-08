@@ -1,7 +1,8 @@
 from django.contrib import admin
 
-from .user import UserAdmin
 from ..models import User
+
+from .user_admin import UserAdmin
 
 admin.site.register(
     User,
