@@ -18,6 +18,6 @@ class User(AbstractUser):
     REQUIRED_FIELDS = [
         "first_name",
         "last_name",
-    ]  ## Must not include username field.
+    ]  # Must not include USERNAME_FIELD.
 
     objects = UserManager()
