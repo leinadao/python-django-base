@@ -9,6 +9,21 @@ python = "^3.8.9"
 Django = "^4.0"
 
 [tool.poetry.dev-dependencies]
+yapf = "^0.31.0"
+toml = "^0.10.2"
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_around_default_or_named_assign = true
+dedent_closing_brackets = true
+coalesce_brackets = true
+allow_split_before_dict_value = false
+split_all_top_level_comma_separated_values = true
+spaces_before_comment = 2
+
+## TODO: configure yapfignore in here after next release. v0.31.0 doesn't support it yet.
+#[tool.yapfignore]
+#ignore_patterns = ["*/migrations"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
