@@ -12,6 +12,7 @@ Django = "^4.0"
 yapf = "^0.31.0"
 toml = "^0.10.2"
 flake8 = "^4.0.1"
+flake8-isort = "^4.1.1"
 
 [tool.yapf]
 based_on_style = "pep8"
@@ -25,6 +26,10 @@ spaces_before_comment = 2
 ## TODO: configure yapfignore in here after next release. v0.31.0 doesn't support it yet.
 #[tool.yapfignore]
 #ignore_patterns = ["*/migrations"]
+
+[tool.isort]
+profile = "django"
+extend_skip = ["migrations"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
