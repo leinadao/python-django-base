@@ -13,6 +13,8 @@ yapf = "^0.31.0"
 toml = "^0.10.2"
 flake8 = "^4.0.1"
 flake8-isort = "^4.1.1"
+Sphinx = "^4.3.2"
+sphinx-rtd-theme = "^1.0.0"
 
 [tool.yapf]
 based_on_style = "pep8"
