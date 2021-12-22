@@ -1,5 +1,5 @@
 # To update docs from root dir:
-poetry run sphinx-apidoc -o docs .
+poetry run sphinx-apidoc -f -o docs .
 poetry run sphinx-build -b html docs docs/_build/html ## Same as make html from in the docs dir.
 # To view, e.g.:
 open -a "Google Chrome" docs/_build/html/index.html
