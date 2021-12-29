@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .alpha_and_numeric_validator import (  # noqa: F401.
     AlphaAndNumericValidator,
 )
