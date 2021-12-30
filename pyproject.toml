@@ -16,7 +16,6 @@ Sphinx = "^4.3.2"
 sphinx-rtd-theme = "^1.0.0"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
-flake8-broken-line = "^0.4.0"
 black = "^21.12b0"
 
 [tool.isort]
