@@ -10,7 +10,6 @@ Django = "^4.0"
 django-bootstrap-v5 = "^1.0.7"
 
 [tool.poetry.dev-dependencies]
-toml = "^0.10.2"
 flake8 = "^4.0.1"
 flake8-isort = "^4.1.1"
 Sphinx = "^4.3.2"
