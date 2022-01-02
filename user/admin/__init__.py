@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+"""User related admin configs."""
 from django.contrib import admin
 
 from ..models import User
-from .user_admin import UserAdmin
+from ._user_admin import UserAdmin
 
 admin.site.register(
     User,

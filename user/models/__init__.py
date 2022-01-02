@@ -1,2 +1,3 @@
 # -*- coding: utf-8 -*-
-from .user import User  # noqa: F401.
+"""User models."""
+from ._user import User  # noqa: F401.
