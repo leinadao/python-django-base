@@ -1,3 +1,5 @@
+default_language_version:
+  python: python3.8.9
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
@@ -32,7 +34,6 @@ repos:
     rev: 21.12b0
     hooks:
       - id: black
-        language_version: python3
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 4.0.1
     hooks:
@@ -41,4 +42,18 @@ repos:
           - darglint==1.8.1
           - flake8-docstrings==1.6.0
           - flake8-isort==4.1.1
-        language_version: python3
+-   repo: https://github.com/ecugol/pre-commit-hooks-django
+    rev: v0.4.0
+    hooks:
+    -   id: check-untracked-migrations
+    -   id: check-unapplied-migrations
+        entry: poetry run python manage.py migrate --check
+        # find in normal entrypoint locates manage.py in .venv... testfixtures...
+        # poetry required for access to Django etc. packages.
+    -   id: check-absent-migrations
+        entry: poetry run python manage.py makemigrations --check --dry-run
+    #-   id: po-location-format # TODO: Investigate?
+        # Mandatory, select one of the following options:
+        # file: show only the file path as location
+        # never: remove all locations
+        #args: ["--add-location", "file"]
