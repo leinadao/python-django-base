@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "django_base"
+name = "pythondjangobase"
 version = "0.1.0"
-description = "A base django site setup"
+description = "A base Python Django site setup."
 authors = ["Daniel Osborne <danaosb@gmail.com>"]
 
 [tool.poetry.dependencies]
