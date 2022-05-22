@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from os import getenv
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+CORE_DIR = Path(__file__).resolve().parent
+BASE_DIR = CORE_DIR.parent
 
 # Set up custom user model:
 AUTH_USER_MODEL = "user.User"
@@ -57,7 +57,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [CORE_DIR / "templates" / CORE_DIR.name],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
